@@ -9,4 +9,4 @@
 KC_Q,              KC_W,              KC_E,              KC_R,              KC_T,              KC_Y,              KC_U,              KC_I,              KC_O,              KC_P,              \
 LALT_T(KC_A),      LGUI_T(KC_S),      LSFT_T(KC_D),      LCTL_T(KC_F),      KC_G,              KC_H,              LCTL_T(KC_J),      LSFT_T(KC_K),      LGUI_T(KC_L),      LALT_T(KC_QUOT),   \
 LT(U_BUTTON,KC_Z), ALGR_T(KC_X),      KC_C,              KC_V,              KC_B,              KC_N,              KC_M,              KC_COMM,           ALGR_T(KC_DOT),    LT(U_BUTTON,KC_SLSH),\
-U_NP,              U_NP,              LT(U_FUN,KC_DEL),  LT(U_NUM,KC_BSPC), LT(U_SYM,KC_ENT),  LT(U_MOUSE,KC_ESC),LT(U_NAV,KC_SPC),  LT(U_MEDIA,KC_TAB),U_NP,              U_NP
+U_NP,              U_NP,              LT(U_FUN,KC_DEL),  LT(U_NUM,KC_BSPC), LT(U_SYM,KC_ENT),  LT(U_MOUSE,KC_SPC),LT(U_NAV,KC_ESC),  LT(U_MEDIA,KC_TAB),U_NP,              U_NP
