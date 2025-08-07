@@ -61,8 +61,8 @@ const key_override_t *key_overrides[] = {
 // thumb combos
 
 #if defined (MIRYOKU_KLUDGE_THUMBCOMBOS)
-const uint16_t PROGMEM thumbcombos_base_right[] = {LT(U_SYM, KC_ENT), LT(U_NUM, KC_BSPC), COMBO_END};
-const uint16_t PROGMEM thumbcombos_base_left[] = {LT(U_NAV, KC_SPC), LT(U_MOUSE, KC_TAB), COMBO_END};
+const uint16_t PROGMEM thumbcombos_base_right[] = {LT(U_SYM, KC_BSPC), LT(U_NUM, KC_ESC), COMBO_END};
+const uint16_t PROGMEM thumbcombos_base_left[] = {LT(U_NAV, KC_ENT), LT(U_MOUSE, KC_SPC), COMBO_END};
 const uint16_t PROGMEM thumbcombos_nav[] = {KC_ENT, KC_BSPC, COMBO_END};
 const uint16_t PROGMEM thumbcombos_mouse[] = {KC_BTN2, KC_BTN1, COMBO_END};
 const uint16_t PROGMEM thumbcombos_media[] = {KC_MSTP, KC_MPLY, COMBO_END};
@@ -75,7 +75,7 @@ const uint16_t PROGMEM thumbcombos_sym[] = {KC_RPRN, KC_UNDS, COMBO_END};
 const uint16_t PROGMEM thumbcombos_fun[] = {KC_SPC, KC_TAB, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
   COMBO(thumbcombos_base_right, LT(U_FUN, KC_DEL)),
-  COMBO(thumbcombos_base_left, LT(U_MEDIA, KC_ESC)),
+  COMBO(thumbcombos_base_left, LT(U_MEDIA, KC_TAB)),
   COMBO(thumbcombos_nav, KC_DEL),
   COMBO(thumbcombos_mouse, KC_BTN3),
   COMBO(thumbcombos_media, KC_MUTE),
