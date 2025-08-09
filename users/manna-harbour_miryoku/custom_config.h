@@ -18,19 +18,33 @@
 // space
 // escape
 
+// Opposite layers:
+// NUM NAV
+// SYM MOUSE
+
 // Important when using mini.jump:
 #define CAPS_WORD_INVERT_ON_SHIFT
 
 // Customized miryoku babel in order to change home mods!
 
 // MIRYOKU_LAYER_BASE MIRYOKU_ALTERNATIVES_BASE_QWERTY_FLIP
-// TODO: test U_BUTTON
-// Changed tap part of thumb keys. Used to be del backspace enter - tab space escape
+// Changed the tap part of thumb keys. Used to be del backspace enter - tab space escape
 #define MIRYOKU_LAYER_BASE \
 KC_Q,              KC_W,              KC_E,              KC_R,              KC_T,              KC_Y,              KC_U,              KC_I,              KC_O,              KC_P,              \
 LALT_T(KC_A),      LGUI_T(KC_S),      LSFT_T(KC_D),      LCTL_T(KC_F),      KC_G,              KC_H,              LCTL_T(KC_J),      LSFT_T(KC_K),      LGUI_T(KC_L),      LALT_T(KC_QUOT),   \
 LT(U_BUTTON,KC_Z), ALGR_T(KC_X),      KC_C,              KC_V,              KC_B,              KC_N,              KC_M,              KC_COMM,           ALGR_T(KC_DOT),    LT(U_BUTTON,KC_SLSH),\
 U_NP,              U_NP,              LT(U_FUN,KC_DEL),  LT(U_NUM,KC_ESC), LT(U_SYM,KC_BSPC),  LT(U_MOUSE,KC_SPC),LT(U_NAV,KC_ENT),  LT(U_MEDIA,KC_TAB),U_NP,              U_NP
+
+// MIRYOKU_LAYER_TAP MIRYOKU_ALTERNATIVES_TAP_QWERTY_FLIP
+// Changed thumb keys.
+#define MIRYOKU_LAYER_TAP \
+KC_Q,              KC_W,              KC_E,              KC_R,              KC_T,              KC_Y,              KC_U,              KC_I,              KC_O,              KC_P,              \
+KC_A,              KC_S,              KC_D,              KC_F,              KC_G,              KC_H,              KC_J,              KC_K,              KC_L,              KC_QUOT,           \
+KC_Z,              KC_X,              KC_C,              KC_V,              KC_B,              KC_N,              KC_M,              KC_COMM,           KC_DOT,            KC_SLSH,           \
+U_NP,              U_NP,              KC_DEL,            KC_ESC,            KC_BSPC,           KC_SPC,            KC_ENT,            KC_TAB,            U_NP,              U_NP
+
+// MIRYOKU_LAYER_NUM MIRYOKU_ALTERNATIVES_NUM_FLIP
+// MIRYOKU_LAYER_SYM MIRYOKU_ALTERNATIVES_SYM_FLIP
 
 // MIRYOKU_LAYER_NAV MIRYOKU_ALTERNATIVES_NAV_INVERTEDT_FLIP
 // Moved KC_PGUP and KC_DOWN to index column.
@@ -50,14 +64,8 @@ U_NU,              KC_MS_L,           KC_MS_D,           KC_MS_R,           KC_W
 U_UND,             U_CUT,             U_CPY,             U_PST,             U_RDO,             U_NA,              TD(U_TD_U_MOUSE),  TD(U_TD_U_SYM),    KC_ALGR,           U_NA,              \
 U_NP,              U_NP,              KC_BTN3,           KC_BTN1,           KC_BTN2,           U_NA,              U_NA,              U_NA,              U_NP,              U_NP
 
-// MIRYOKU_LAYER_TAP MIRYOKU_ALTERNATIVES_TAP_QWERTY_FLIP
-// Changed thumb keys.
-#define MIRYOKU_LAYER_TAP \
-KC_Q,              KC_W,              KC_E,              KC_R,              KC_T,              KC_Y,              KC_U,              KC_I,              KC_O,              KC_P,              \
-KC_A,              KC_S,              KC_D,              KC_F,              KC_G,              KC_H,              KC_J,              KC_K,              KC_L,              KC_QUOT,           \
-KC_Z,              KC_X,              KC_C,              KC_V,              KC_B,              KC_N,              KC_M,              KC_COMM,           KC_DOT,            KC_SLSH,           \
-U_NP,              U_NP,              KC_DEL,            KC_ESC,            KC_BSPC,           KC_SPC,            KC_ENT,            KC_TAB,            U_NP,              U_NP
 
 // Not used:
 // MIRYOKU_LAYER_BASE MIRYOKU_ALTERNATIVES_BASE_COLEMAKDH_FLIP
 // MIRYOKU_LAYER_EXTRA MIRYOKU_ALTERNATIVES_BASE_COLEMAKDH_FLIP
+// MIRYOKU_LAYER_BUTTON MIRYOKU_ALTERNATIVES_BUTTON
