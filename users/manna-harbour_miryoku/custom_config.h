@@ -8,7 +8,17 @@
 // Generated with:
 // MIRYOKU_ALPHAS=QWERTY -e MIRYOKU_EXTRA=COLEMAKDH -e MIRYOKU_TAP=QWERTY -e MIRYOKU_NAV=INVERTEDT -e MIRYOKU_LAYERS=FLIP
 
-// Important for jump:
+// TODO: ... Auto Shift for numbers and symbols. ...
+
+// ... but thumb tap keys are mirrored onto some layers for use with auto-repeat ...:
+// del: NAV
+// backspace: NAV
+// enter: NAV
+// tab
+// space
+// escape
+
+// Important when using mini.jump:
 #define CAPS_WORD_INVERT_ON_SHIFT
 
 // Customized miryoku babel in order to change home mods!
@@ -23,11 +33,9 @@ LT(U_BUTTON,KC_Z), ALGR_T(KC_X),      KC_C,              KC_V,              KC_B
 U_NP,              U_NP,              LT(U_FUN,KC_DEL),  LT(U_NUM,KC_ESC), LT(U_SYM,KC_BSPC),  LT(U_MOUSE,KC_SPC),LT(U_NAV,KC_ENT),  LT(U_MEDIA,KC_TAB),U_NP,              U_NP
 
 // MIRYOKU_LAYER_NAV MIRYOKU_ALTERNATIVES_NAV_INVERTEDT_FLIP
-// TODO: test U_TD_U_NAV and U_TD_U_NUM
-// TODO: ... Thumb keys are duplicated from the base layer to avoid having to layer change mid edit and to enable auto-repeat.
 // Moved KC_PGUP and KC_DOWN to index column.
-// Swapped backspace and enter. On base backspace is also the outer thumb.
-// NOTE: KC_INS not used. Text entry overtype mode.
+// Swapped backspace and enter. On the base layer backspace is also the outer thumb.
+// NOTE: Not using KC_INS. Text entry overtype mode.
 #define MIRYOKU_LAYER_NAV \
 KC_INS,            KC_HOME,           KC_UP,             KC_END,            KC_PGUP,           U_NA,              TD(U_TD_U_BASE),   TD(U_TD_U_EXTRA),  TD(U_TD_U_TAP),    TD(U_TD_BOOT),     \
 CW_TOGG,           KC_LEFT,           KC_DOWN,           KC_RGHT,           KC_PGDN,           U_NA,              KC_LCTL,           KC_LSFT,           KC_LGUI,           KC_LALT,           \
@@ -35,7 +43,12 @@ U_UND,             U_CUT,             U_CPY,             U_PST,             U_RD
 U_NP,              U_NP,              KC_DEL,            KC_ENT,            KC_BSPC,           U_NA,              U_NA,              U_NA,              U_NP,              U_NP
 
 // MIRYOKU_LAYER_MOUSE MIRYOKU_ALTERNATIVES_MOUSE_INVERTEDT_FLIP
-// TODO: Also adjust mouse layer. Swap mouse and nav thumbs?
+// Moved KC_WH_U and KC_WH_D to index column.
+#define MIRYOKU_LAYER_MOUSE \
+U_NU,              KC_WH_L,           KC_MS_U,           KC_WH_R,           KC_WH_U,           U_NA,              TD(U_TD_U_BASE),   TD(U_TD_U_EXTRA),  TD(U_TD_U_TAP),    TD(U_TD_BOOT),     \
+U_NU,              KC_MS_L,           KC_MS_D,           KC_MS_R,           KC_WH_D,           U_NA,              KC_LCTL,           KC_LSFT,           KC_LGUI,           KC_LALT,           \
+U_UND,             U_CUT,             U_CPY,             U_PST,             U_RDO,             U_NA,              TD(U_TD_U_MOUSE),  TD(U_TD_U_SYM),    KC_ALGR,           U_NA,              \
+U_NP,              U_NP,              KC_BTN3,           KC_BTN1,           KC_BTN2,           U_NA,              U_NA,              U_NA,              U_NP,              U_NP
 
 // MIRYOKU_LAYER_TAP MIRYOKU_ALTERNATIVES_TAP_QWERTY_FLIP
 // Changed thumb keys.
