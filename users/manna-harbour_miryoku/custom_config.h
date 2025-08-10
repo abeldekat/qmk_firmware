@@ -14,9 +14,9 @@
 // del: NAV
 // backspace: NAV
 // enter: NAV
-// tab
-// space
-// escape
+// tab: NAV(added)
+// space: NA
+// escape: NA
 
 // Opposite layers:
 // NUM NAV
@@ -58,9 +58,9 @@ U_NP,              U_NP,              U_NA,              U_NA,              U_NA
 // MIRYOKU_LAYER_NAV MIRYOKU_ALTERNATIVES_NAV_INVERTEDT_FLIP
 // Moved KC_PGUP and KC_DOWN to index column.
 // Swapped backspace and enter. On the base layer backspace is also the outer thumb.
-// NOTE: Not using KC_INS. Text entry overtype mode.
+// NOTE: Not using KC_INS. Text entry overtype mode. Replace with tab.
 #define MIRYOKU_LAYER_NAV \
-KC_INS,            KC_HOME,           KC_UP,             KC_END,            KC_PGUP,           U_NA,              TD(U_TD_U_BASE),   TD(U_TD_U_EXTRA),  TD(U_TD_U_TAP),    TD(U_TD_BOOT),     \
+KC_TAB,            KC_HOME,           KC_UP,             KC_END,            KC_PGUP,           U_NA,              TD(U_TD_U_BASE),   TD(U_TD_U_EXTRA),  TD(U_TD_U_TAP),    TD(U_TD_BOOT),     \
 CW_TOGG,           KC_LEFT,           KC_DOWN,           KC_RGHT,           KC_PGDN,           U_NA,              KC_LCTL,           KC_LSFT,           KC_LGUI,           KC_LALT,           \
 U_UND,             U_CUT,             U_CPY,             U_PST,             U_RDO,             U_NA,              TD(U_TD_U_NAV),    TD(U_TD_U_NUM),    KC_ALGR,           U_NA,              _\
 U_NP,              U_NP,              KC_DEL,            KC_ENT,            KC_BSPC,           U_NA,              U_NA,              U_NA,              U_NP,              U_NP
