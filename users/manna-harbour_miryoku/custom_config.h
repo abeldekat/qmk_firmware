@@ -8,19 +8,20 @@
 // Generated with:
 // MIRYOKU_ALPHAS=QWERTY -e MIRYOKU_EXTRA=COLEMAKDH -e MIRYOKU_TAP=QWERTY -e MIRYOKU_NAV=INVERTEDT -e MIRYOKU_LAYERS=FLIP
 
-// TODO: ... Auto Shift for numbers and symbols. ...
+// NOTE: ... Auto Shift for numbers and symbols. ...
 
 // ... but thumb tap keys are mirrored onto some layers for use with auto-repeat ...:
 // del: NAV
 // backspace: NAV
 // enter: NAV
-// tab: NAV(added)
-// space: NA
+// tab: FUN, NAV(added)
+// space: FUN
 // escape: NA
 
 // Opposite layers:
 // NUM NAV
 // SYM MOUSE
+// FUN MEDIA
 
 // Important when using mini.jump:
 #define CAPS_WORD_INVERT_ON_SHIFT
@@ -73,6 +74,10 @@ U_NU,              KC_MS_L,           KC_MS_D,           KC_MS_R,           KC_W
 U_UND,             U_CUT,             U_CPY,             U_PST,             U_RDO,             U_NA,              TD(U_TD_U_MOUSE),  TD(U_TD_U_SYM),    KC_ALGR,           U_NA,              \
 U_NP,              U_NP,              KC_BTN3,           KC_BTN1,           KC_BTN2,           U_NA,              U_NA,              U_NA,              U_NP,              U_NP
 
+// #define MIRYOKU_LAYER_FUN MIRYOKU_ALTERNATIVES_FUN_FLIP
+// Thumbs: KC_TAB KC_SPC KC_APP
+// #define MIRYOKU_LAYER_MEDIA MIRYOKU_ALTERNATIVES_MEDIA_INVERTEDT_FLIP
+// Thumbs: KC_MUTE KC_MPLY KC_MSTP
 
 // Not used:
 // MIRYOKU_LAYER_BASE MIRYOKU_ALTERNATIVES_BASE_COLEMAKDH_FLIP
