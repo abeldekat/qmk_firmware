@@ -44,7 +44,16 @@ KC_Z,              KC_X,              KC_C,              KC_V,              KC_B
 U_NP,              U_NP,              KC_DEL,            KC_ESC,            KC_BSPC,           KC_SPC,            KC_ENT,            KC_TAB,            U_NP,              U_NP
 
 // MIRYOKU_LAYER_NUM MIRYOKU_ALTERNATIVES_NUM_FLIP
+// Dot is duplicated from the base layer...
+// U_NP,              U_NP,              U_NA,              U_NA,              U_NA,              KC_MINS,           KC_0,              KC_DOT,            U_NP,              U_NP
 // MIRYOKU_LAYER_SYM MIRYOKU_ALTERNATIVES_SYM_FLIP
+// Open Parenthesis is duplicated next to Close Parenthesis... However, using flipped, the "0" has the opening parenthesis, which is not consistent.
+// Changed thumb keys.
+#define MIRYOKU_LAYER_SYM \
+TD(U_TD_BOOT),     TD(U_TD_U_TAP),    TD(U_TD_U_EXTRA),  TD(U_TD_U_BASE),   U_NA,              KC_LCBR,           KC_AMPR,           KC_ASTR,           KC_LPRN,           KC_RCBR,           \
+KC_LALT,           KC_LGUI,           KC_LSFT,           KC_LCTL,           U_NA,              KC_PLUS,           KC_DLR,            KC_PERC,           KC_CIRC,           KC_COLN,           \
+U_NA,              KC_ALGR,           TD(U_TD_U_MOUSE),  TD(U_TD_U_SYM),    U_NA,              KC_PIPE,           KC_EXLM,           KC_AT,             KC_HASH,           KC_TILD,           \
+U_NP,              U_NP,              U_NA,              U_NA,              U_NA,              KC_UNDS,           KC_RPRN,           KC_LPRN,           U_NP,              U_NP
 
 // MIRYOKU_LAYER_NAV MIRYOKU_ALTERNATIVES_NAV_INVERTEDT_FLIP
 // Moved KC_PGUP and KC_DOWN to index column.
