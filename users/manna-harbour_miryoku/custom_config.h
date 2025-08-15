@@ -6,9 +6,9 @@
 #pragma once
 
 // Generated with:
-// MIRYOKU_ALPHAS=QWERTY -e MIRYOKU_EXTRA=COLEMAKDH -e MIRYOKU_TAP=QWERTY -e MIRYOKU_NAV=INVERTEDT -e MIRYOKU_LAYERS=FLIP
+// -e MIRYOKU_NAV=INVERTEDT -e MIRYOKU_LAYERS=FLIP
 
-// NOTE: ... Auto Shift for numbers and symbols. ...
+// TODO: left and right paren combo in c file
 
 // ... but thumb tap keys are mirrored onto some layers for use with auto-repeat ...:
 // del: NAV
@@ -28,21 +28,20 @@
 
 // Customized miryoku babel in order to change home mods!
 
-// MIRYOKU_LAYER_BASE MIRYOKU_ALTERNATIVES_BASE_QWERTY_FLIP
+// MIRYOKU_LAYER_BASE MIRYOKU_ALTERNATIVES_BASE_COLEMAKDH_FLIP
+// With the left hand I am only able to touch type with the index finger used as a "drumstick".
+// Added 6 combos, see manna-harbour_miryoku.c.
+// Moved a to the right and the corresponding r one position up. Letter w is now a combo on the right hand.
+// Goal: Left hand only uses columns 2, 3 and 4
 // Changed the tap part of thumb keys. Used to be del backspace enter - tab space escape
 #define MIRYOKU_LAYER_BASE \
-KC_Q,              KC_W,              KC_E,              KC_R,              KC_T,              KC_Y,              KC_U,              KC_I,              KC_O,              KC_P,              \
-LALT_T(KC_A),      LGUI_T(KC_S),      LSFT_T(KC_D),      LCTL_T(KC_F),      KC_G,              KC_H,              LCTL_T(KC_J),      LSFT_T(KC_K),      LGUI_T(KC_L),      LALT_T(KC_QUOT),   \
-LT(U_BUTTON,KC_Z), ALGR_T(KC_X),      KC_C,              KC_V,              KC_B,              KC_N,              KC_M,              KC_COMM,           ALGR_T(KC_DOT),    LT(U_BUTTON,KC_SLSH),\
+KC_Q,              KC_R,              KC_F,              KC_P,              KC_B,              KC_J,              KC_L,              KC_U,              KC_Y,              KC_QUOT,           \
+LALT_T(KC_A),      LGUI_T(KC_A),      LSFT_T(KC_S),      LCTL_T(KC_T),      KC_G,              KC_M,              LCTL_T(KC_N),      LSFT_T(KC_E),      LGUI_T(KC_I),      LALT_T(KC_O),      \
+LT(U_BUTTON,KC_Z), ALGR_T(KC_X),      KC_C,              KC_D,              KC_V,              KC_K,              KC_H,              KC_COMM,           ALGR_T(KC_DOT),    LT(U_BUTTON,KC_SLSH),\
 U_NP,              U_NP,              LT(U_FUN,KC_DEL),  LT(U_NUM,KC_ESC), LT(U_SYM,KC_BSPC),  LT(U_MOUSE,KC_SPC),LT(U_NAV,KC_ENT),  LT(U_MEDIA,KC_TAB),U_NP,              U_NP
 
-// MIRYOKU_LAYER_TAP MIRYOKU_ALTERNATIVES_TAP_QWERTY_FLIP
+// TODO: MIRYOKU_LAYER_EXTRA MIRYOKU_ALTERNATIVES_BASE_QWERTY_FLIP thumb keys
 // Changed thumb keys.
-#define MIRYOKU_LAYER_TAP \
-KC_Q,              KC_W,              KC_E,              KC_R,              KC_T,              KC_Y,              KC_U,              KC_I,              KC_O,              KC_P,              \
-KC_A,              KC_S,              KC_D,              KC_F,              KC_G,              KC_H,              KC_J,              KC_K,              KC_L,              KC_QUOT,           \
-KC_Z,              KC_X,              KC_C,              KC_V,              KC_B,              KC_N,              KC_M,              KC_COMM,           KC_DOT,            KC_SLSH,           \
-U_NP,              U_NP,              KC_DEL,            KC_ESC,            KC_BSPC,           KC_SPC,            KC_ENT,            KC_TAB,            U_NP,              U_NP
 
 // MIRYOKU_LAYER_NUM MIRYOKU_ALTERNATIVES_NUM_FLIP
 // Dot is duplicated from the base layer...
@@ -80,6 +79,5 @@ U_NP,              U_NP,              KC_BTN3,           KC_BTN1,           KC_B
 // Thumbs: KC_MUTE KC_MPLY KC_MSTP
 
 // Not used:
-// MIRYOKU_LAYER_BASE MIRYOKU_ALTERNATIVES_BASE_COLEMAKDH_FLIP
-// MIRYOKU_LAYER_EXTRA MIRYOKU_ALTERNATIVES_BASE_COLEMAKDH_FLIP
 // MIRYOKU_LAYER_BUTTON MIRYOKU_ALTERNATIVES_BUTTON
+// MIRYOKU_LAYER_TAP MIRYOKU_ALTERNATIVES_TAP_COLEMAKDH_FLIP
