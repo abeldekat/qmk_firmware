@@ -12,10 +12,16 @@
 #define TAPPING_TERM 200
 
 // Prevent normal rollover on alphas from accidentally triggering mods.
+// This is now the default...
 // #define IGNORE_MOD_TAP_INTERRUPT
 
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
 #define QUICK_TAP_TERM 0
+
+// Immediately settle as tapped for same finger rollovers
+// Opposite hands rule
+// Added to QMK in 2025 Q1
+#define CHORDAL_HOLD
 
 // Auto Shift
 #define NO_AUTO_SHIFT_ALPHA
@@ -36,7 +42,8 @@
 
 // Thumb Combos
 #if defined (MIRYOKU_KLUDGE_THUMBCOMBOS)
-  #define COMBO_COUNT 14
+  #define COMBO_COUNT 16
   // #define COMBO_TERM 200
+  #define COMBO_TERM 40
   #define EXTRA_SHORT_COMBOS
 #endif

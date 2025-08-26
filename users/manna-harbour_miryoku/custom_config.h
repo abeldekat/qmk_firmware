@@ -35,10 +35,10 @@
 // Goal: Left hand only uses columns 2, 3 and 4
 // Changed the tap part of thumb keys. Used to be del backspace enter - tab space escape
 #define MIRYOKU_LAYER_BASE \
-KC_Q,              KC_R,              KC_F,              KC_P,              KC_B,              KC_J,              KC_L,              KC_U,              KC_Y,              KC_QUOT,           \
-LALT_T(KC_A),      LGUI_T(KC_A),      LSFT_T(KC_S),      LCTL_T(KC_T),      KC_G,              KC_M,              LCTL_T(KC_N),      LSFT_T(KC_E),      LGUI_T(KC_I),      LALT_T(KC_O),      \
-LT(U_BUTTON,KC_Z), ALGR_T(KC_X),      KC_C,              KC_D,              KC_V,              KC_K,              KC_H,              KC_COMM,           ALGR_T(KC_DOT),    LT(U_BUTTON,KC_SLSH),\
-U_NP,              U_NP,              LT(U_FUN,KC_DEL),  LT(U_NUM,KC_ESC), LT(U_SYM,KC_BSPC),  LT(U_MOUSE,KC_SPC),LT(U_NAV,KC_ENT),  LT(U_MEDIA,KC_TAB),U_NP,              U_NP
+U_NU,              KC_R,              KC_F,              KC_P,              U_NU,              KC_J,              KC_L,              KC_U,              KC_Y,              KC_QUOT,           \
+LALT_T(U_NU),      LGUI_T(KC_A),      LSFT_T(KC_S),      LCTL_T(KC_T),      U_NU,              KC_M,              LCTL_T(KC_N),      LSFT_T(KC_E),      LGUI_T(KC_I),      LALT_T(KC_O),      \
+LT(U_BUTTON,U_NU), ALGR_T(KC_X),      KC_C,              KC_D,              U_NU,              KC_K,              KC_H,              KC_COMM,           ALGR_T(KC_DOT),    LT(U_BUTTON,KC_SLSH),\
+U_NP,              U_NP,              LT(U_FUN,KC_DEL),  LT(U_NUM,KC_ESC),  LT(U_SYM,KC_BSPC), LT(U_MOUSE,KC_SPC),LT(U_NAV,KC_ENT),  LT(U_MEDIA,KC_TAB),U_NP,              U_NP
 
 // TODO: MIRYOKU_LAYER_EXTRA MIRYOKU_ALTERNATIVES_BASE_QWERTY_FLIP thumb keys
 // Changed thumb keys.
