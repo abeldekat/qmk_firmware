@@ -64,20 +64,18 @@ const key_override_t *key_overrides[] = {
 const uint16_t PROGMEM thumbcombos_base_right[] = {LT(U_SYM, KC_BSPC), LT(U_NUM, KC_ESC), COMBO_END};
 const uint16_t PROGMEM thumbcombos_base_left[] = {LT(U_NAV, KC_ENT), LT(U_MOUSE, KC_SPC), COMBO_END};
 
-// colemak, combo for j and k for easier navigation with a linenumber
+// colemak, combo for j to easier navigate by linenumber
 const uint16_t PROGMEM fingercombos_j[] = {KC_4, KC_5, COMBO_END};
-const uint16_t PROGMEM fingercombos_k[] = {KC_5, KC_6, COMBO_END};
+const uint16_t PROGMEM fingercombos_k[] = {KC_4, KC_6, COMBO_END};
 
-// left hand fifth column as combos on right hand second and third columns:
-const uint16_t PROGMEM fingercombos_b[] = {KC_L, KC_U, COMBO_END};
+// left hand, first and fifth column as combos, keeping the a on the left hand:
+const uint16_t PROGMEM fingercombos_b[] = {KC_L, KC_U, COMBO_END}; // pressing l and e is more difficult
 const uint16_t PROGMEM fingercombos_g[] = {LCTL_T(KC_N), LSFT_T(KC_E), COMBO_END};
-// const uint16_t PROGMEM fingercombos_go[] = {LCTL_T(KC_N), LT(U_MOUSE,KC_SPC), COMBO_END};
-const uint16_t PROGMEM fingercombos_v[] = {KC_H, KC_COMM, COMBO_END};
+const uint16_t PROGMEM fingercombos_v[] = {KC_H, LSFT_T(KC_E), COMBO_END};
 
-// left hand first column as combos on right hand third and fourth columns
-const uint16_t PROGMEM fingercombos_q[] = {KC_U, KC_Y, COMBO_END};
-const uint16_t PROGMEM fingercombos_w[] = {LSFT_T(KC_E), LGUI_T(KC_I), COMBO_END}; //  NOTE: Not the a....
-const uint16_t PROGMEM fingercombos_z[] = {KC_COMM, ALGR_T(KC_DOT), COMBO_END};
+const uint16_t PROGMEM fingercombos_q[] = {LCTL_T(KC_N), KC_Y, COMBO_END};
+const uint16_t PROGMEM fingercombos_w[] = {LCTL_T(KC_N), LGUI_T(KC_I), COMBO_END};
+const uint16_t PROGMEM fingercombos_z[] = {LCTL_T(KC_N), LALT_T(KC_O), COMBO_END}; // pressing n and dot is more difficult
 
 const uint16_t PROGMEM thumbcombos_nav[] = {KC_ENT, KC_BSPC, COMBO_END};
 const uint16_t PROGMEM thumbcombos_mouse[] = {KC_BTN2, KC_BTN1, COMBO_END};
@@ -98,9 +96,7 @@ combo_t key_combos[COMBO_COUNT] = {
 
   COMBO(fingercombos_b, KC_B),
   COMBO(fingercombos_g, KC_G),
-  // COMBO(fingercombos_go, KC_G),
   COMBO(fingercombos_v, KC_V),
-
   COMBO(fingercombos_q, KC_Q),
   COMBO(fingercombos_w, KC_W),
   COMBO(fingercombos_z, KC_Z),
