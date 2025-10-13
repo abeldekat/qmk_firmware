@@ -5,20 +5,15 @@
 
 #pragma once
 
-// Generated with:
-// -e MIRYOKU_NAV=INVERTEDT -e MIRYOKU_LAYERS=FLIP
-
-// TODO: left and right paren combo in c file
-
 // ... but thumb tap keys are mirrored onto some layers for use with auto-repeat ...:
 // del: NAV
 // backspace: NAV
 // enter: NAV
-// tab: FUN, NAV(added)
+// tab: FUN
 // space: FUN
 // escape: NA
 
-// Opposite layers:
+// Opposite layers
 // NUM NAV
 // SYM MOUSE
 // FUN MEDIA
@@ -28,56 +23,38 @@
 
 // Customized miryoku babel in order to change home mods!
 
-// MIRYOKU_LAYER_BASE MIRYOKU_ALTERNATIVES_BASE_COLEMAKDH_FLIP
-// With the left hand I am only able to touch type with the index finger used as a "drumstick".
-// Added 6 combos, see manna-harbour_miryoku.c.
-// Moved a to the right and the corresponding r one position up. Letter w is now a combo on the right hand.
-// Goal: Left hand only uses columns 2, 3 and 4
-// Changed the tap part of thumb keys. Used to be del backspace enter - tab space escape
+// MIRYOKU_LAYER_BASE MIRYOKU_ALTERNATIVES_BASE_COLEMAKDH
+// Changed the tap part of thumb keys. Used to be esc spc tab - ent bspc del
+// Also flipped mouse and nav to ensure left thumb rests on nav.
+// For symmetry also flipped num and sym.
 #define MIRYOKU_LAYER_BASE \
-U_NU,              KC_R,              KC_F,              KC_P,              U_NU,              KC_J,              KC_L,              KC_U,              KC_Y,              KC_QUOT,           \
-LALT_T(U_NU),      LGUI_T(KC_A),      LSFT_T(KC_S),      LCTL_T(KC_T),      U_NU,              KC_M,              LCTL_T(KC_N),      LSFT_T(KC_E),      LGUI_T(KC_I),      LALT_T(KC_O),      \
-LT(U_BUTTON,U_NU), ALGR_T(KC_X),      KC_C,              KC_D,              U_NU,              KC_K,              KC_H,              KC_COMM,           ALGR_T(KC_DOT),    LT(U_BUTTON,KC_SLSH),\
-U_NP,              U_NP,              LT(U_FUN,KC_DEL),  LT(U_NUM,KC_ESC),  LT(U_SYM,KC_BSPC), LT(U_MOUSE,KC_SPC),LT(U_NAV,KC_ENT),  LT(U_MEDIA,KC_TAB),U_NP,              U_NP
+KC_Q,              KC_W,              KC_F,              KC_P,              KC_B,              KC_J,              KC_L,              KC_U,              KC_Y,              KC_QUOT,           \
+LALT_T(KC_A),      LGUI_T(KC_R),      LSFT_T(KC_S),      LCTL_T(KC_T),      KC_G,              KC_M,              LCTL_T(KC_N),      LSFT_T(KC_E),      LGUI_T(KC_I),      LALT_T(KC_O),      \
+LT(U_BUTTON,KC_Z), ALGR_T(KC_X),      KC_C,              KC_D,              KC_V,              KC_K,              KC_H,              KC_COMM,           ALGR_T(KC_DOT),    LT(U_BUTTON,KC_SLSH),\
+U_NP,              U_NP,              LT(U_MEDIA,KC_DEL),LT(U_MOUSE,KC_ENT),LT(U_NAV,KC_BSPC), LT(U_NUM,KC_SPC),  LT(U_SYM,KC_ESC),  LT(U_FUN,KC_TAB),  U_NP,              U_NP
 
-// TODO: MIRYOKU_LAYER_EXTRA MIRYOKU_ALTERNATIVES_BASE_QWERTY_FLIP thumb keys
-// Changed thumb keys.
+// TODO: MIRYOKU_LAYER_EXTRA MIRYOKU_ALTERNATIVES_BASE_QWERTY thumb keys
 
-// MIRYOKU_LAYER_NUM MIRYOKU_ALTERNATIVES_NUM_FLIP
+// MIRYOKU_LAYER_NUM MIRYOKU_ALTERNATIVES_NUM
 // Dot is duplicated from the base layer...
-// U_NP,              U_NP,              U_NA,              U_NA,              U_NA,              KC_MINS,           KC_0,              KC_DOT,            U_NP,              U_NP
-// MIRYOKU_LAYER_SYM MIRYOKU_ALTERNATIVES_SYM_FLIP
-// Open Parenthesis is duplicated next to Close Parenthesis... However, using flipped, the "0" has the opening parenthesis, which is not consistent.
-// Changed thumb keys.
-#define MIRYOKU_LAYER_SYM \
-TD(U_TD_BOOT),     TD(U_TD_U_TAP),    TD(U_TD_U_EXTRA),  TD(U_TD_U_BASE),   U_NA,              KC_LCBR,           KC_AMPR,           KC_ASTR,           KC_LPRN,           KC_RCBR,           \
-KC_LALT,           KC_LGUI,           KC_LSFT,           KC_LCTL,           U_NA,              KC_PLUS,           KC_DLR,            KC_PERC,           KC_CIRC,           KC_COLN,           \
-U_NA,              KC_ALGR,           TD(U_TD_U_MOUSE),  TD(U_TD_U_SYM),    U_NA,              KC_PIPE,           KC_EXLM,           KC_AT,             KC_HASH,           KC_TILD,           \
-U_NP,              U_NP,              U_NA,              U_NA,              U_NA,              KC_UNDS,           KC_RPRN,           KC_LPRN,           U_NP,              U_NP
 
-// MIRYOKU_LAYER_NAV MIRYOKU_ALTERNATIVES_NAV_INVERTEDT_FLIP
-// Moved KC_PGUP and KC_DOWN to index column.
+// MIRYOKU_LAYER_SYM MIRYOKU_ALTERNATIVES_SYM
+// Open Parenthesis is duplicated next to Close Parenthesis...
+
+// MIRYOKU_LAYER_NAV MIRYOKU_ALTERNATIVES_NAV_VI
 // Swapped backspace and enter. On the base layer backspace is also the outer thumb.
-// NOTE: Not using KC_INS. Text entry overtype mode. Replace with tab.
 #define MIRYOKU_LAYER_NAV \
-KC_TAB,            KC_HOME,           KC_UP,             KC_END,            KC_PGUP,           U_NA,              TD(U_TD_U_BASE),   TD(U_TD_U_EXTRA),  TD(U_TD_U_TAP),    TD(U_TD_BOOT),     \
-CW_TOGG,           KC_LEFT,           KC_DOWN,           KC_RGHT,           KC_PGDN,           U_NA,              KC_LCTL,           KC_LSFT,           KC_LGUI,           KC_LALT,           \
-U_UND,             U_CUT,             U_CPY,             U_PST,             U_RDO,             U_NA,              TD(U_TD_U_NAV),    TD(U_TD_U_NUM),    KC_ALGR,           U_NA,              _\
-U_NP,              U_NP,              KC_DEL,            KC_ENT,            KC_BSPC,           U_NA,              U_NA,              U_NA,              U_NP,              U_NP
+TD(U_TD_BOOT),     TD(U_TD_U_TAP),    TD(U_TD_U_EXTRA),  TD(U_TD_U_BASE),   U_NA,              U_RDO,             U_PST,             U_CPY,             U_CUT,             U_UND,             \
+KC_LALT,           KC_LGUI,           KC_LSFT,           KC_LCTL,           U_NA,              KC_LEFT,           KC_DOWN,           KC_UP,             KC_RGHT,           CW_TOGG,           \
+U_NA,              KC_ALGR,           TD(U_TD_U_NUM),    TD(U_TD_U_NAV),    U_NA,              KC_HOME,           KC_PGDN,           KC_PGUP,           KC_END,            KC_INS,            \
+U_NP,              U_NP,              U_NA,              U_NA,              U_NA,              KC_BSPC,           KC_ENT,            KC_DEL,            U_NP,              U_NP
 
-// MIRYOKU_LAYER_MOUSE MIRYOKU_ALTERNATIVES_MOUSE_INVERTEDT_FLIP
-// Moved KC_WH_U and KC_WH_D to index column.
-#define MIRYOKU_LAYER_MOUSE \
-U_NU,              KC_WH_L,           KC_MS_U,           KC_WH_R,           KC_WH_U,           U_NA,              TD(U_TD_U_BASE),   TD(U_TD_U_EXTRA),  TD(U_TD_U_TAP),    TD(U_TD_BOOT),     \
-U_NU,              KC_MS_L,           KC_MS_D,           KC_MS_R,           KC_WH_D,           U_NA,              KC_LCTL,           KC_LSFT,           KC_LGUI,           KC_LALT,           \
-U_UND,             U_CUT,             U_CPY,             U_PST,             U_RDO,             U_NA,              TD(U_TD_U_MOUSE),  TD(U_TD_U_SYM),    KC_ALGR,           U_NA,              \
-U_NP,              U_NP,              KC_BTN3,           KC_BTN1,           KC_BTN2,           U_NA,              U_NA,              U_NA,              U_NP,              U_NP
+// MIRYOKU_LAYER_MOUSE MIRYOKU_ALTERNATIVES_MOUSE
+// TODO: Move KC_WH_U and KC_WH_D to index column?
 
-// #define MIRYOKU_LAYER_FUN MIRYOKU_ALTERNATIVES_FUN_FLIP
-// Thumbs: KC_TAB KC_SPC KC_APP
-// #define MIRYOKU_LAYER_MEDIA MIRYOKU_ALTERNATIVES_MEDIA_INVERTEDT_FLIP
-// Thumbs: KC_MUTE KC_MPLY KC_MSTP
+// #define MIRYOKU_LAYER_FUN MIRYOKU_ALTERNATIVES_FUN
+// #define MIRYOKU_LAYER_MEDIA MIRYOKU_ALTERNATIVES_MEDIA
 
 // Not used:
 // MIRYOKU_LAYER_BUTTON MIRYOKU_ALTERNATIVES_BUTTON
-// MIRYOKU_LAYER_TAP MIRYOKU_ALTERNATIVES_TAP_COLEMAKDH_FLIP
+// MIRYOKU_LAYER_TAP MIRYOKU_ALTERNATIVES_TAP_COLEMAKDH

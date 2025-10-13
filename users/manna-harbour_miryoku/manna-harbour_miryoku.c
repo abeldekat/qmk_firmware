@@ -61,23 +61,13 @@ const key_override_t *key_overrides[] = {
 // thumb combos
 
 #if defined (MIRYOKU_KLUDGE_THUMBCOMBOS)
-const uint16_t PROGMEM thumbcombos_base_right[] = {LT(U_SYM, KC_BSPC), LT(U_NUM, KC_ESC), COMBO_END};
-const uint16_t PROGMEM thumbcombos_base_left[] = {LT(U_NAV, KC_ENT), LT(U_MOUSE, KC_SPC), COMBO_END};
+const uint16_t PROGMEM thumbcombos_base_right[] = {LT(U_NUM, KC_SPC), LT(U_SYM, KC_ESC), COMBO_END};
+const uint16_t PROGMEM thumbcombos_base_left[] = {LT(U_MOUSE, KC_ENT), LT(U_NAV, KC_BSPC), COMBO_END};
 
-// colemak, combo for j to easier navigate by linenumber
-const uint16_t PROGMEM fingercombos_j[] = {KC_4, KC_5, COMBO_END};
-const uint16_t PROGMEM fingercombos_k[] = {KC_4, KC_6, COMBO_END};
+// colemak better tab completion in terminal
+const uint16_t PROGMEM fingercombos_tab[] = {LCTL_T(KC_N), LSFT_T(KC_E), COMBO_END};
 
-// left hand, first and fifth column as combos, keeping the a on the left hand:
-const uint16_t PROGMEM fingercombos_b[] = {KC_L, KC_U, COMBO_END}; // pressing l and e is more difficult
-const uint16_t PROGMEM fingercombos_g[] = {LCTL_T(KC_N), LSFT_T(KC_E), COMBO_END};
-const uint16_t PROGMEM fingercombos_v[] = {KC_H, LSFT_T(KC_E), COMBO_END};
-
-const uint16_t PROGMEM fingercombos_q[] = {LCTL_T(KC_N), KC_Y, COMBO_END};
-const uint16_t PROGMEM fingercombos_w[] = {LCTL_T(KC_N), LGUI_T(KC_I), COMBO_END};
-const uint16_t PROGMEM fingercombos_z[] = {LCTL_T(KC_N), LALT_T(KC_O), COMBO_END}; // pressing n and dot is more difficult
-
-const uint16_t PROGMEM thumbcombos_nav[] = {KC_ENT, KC_BSPC, COMBO_END};
+const uint16_t PROGMEM thumbcombos_nav[] = {KC_BSPC, KC_ENT, COMBO_END};
 const uint16_t PROGMEM thumbcombos_mouse[] = {KC_BTN2, KC_BTN1, COMBO_END};
 const uint16_t PROGMEM thumbcombos_media[] = {KC_MSTP, KC_MPLY, COMBO_END};
 const uint16_t PROGMEM thumbcombos_num[] = {KC_0, KC_MINS, COMBO_END};
@@ -91,15 +81,7 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(thumbcombos_base_right, LT(U_FUN, KC_DEL)),
   COMBO(thumbcombos_base_left, LT(U_MEDIA, KC_TAB)),
 
-  COMBO(fingercombos_j, KC_J),
-  COMBO(fingercombos_k, KC_K),
-
-  COMBO(fingercombos_b, KC_B),
-  COMBO(fingercombos_g, KC_G),
-  COMBO(fingercombos_v, KC_V),
-  COMBO(fingercombos_q, KC_Q),
-  COMBO(fingercombos_w, KC_W),
-  COMBO(fingercombos_z, KC_Z),
+  COMBO(fingercombos_tab, KC_TAB),
 
   COMBO(thumbcombos_nav, KC_DEL),
   COMBO(thumbcombos_mouse, KC_BTN3),
